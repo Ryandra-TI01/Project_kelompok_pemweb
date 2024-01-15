@@ -3,42 +3,63 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Sista Backend</title>
-		<!-- Google Font: Source Sans Pro -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
-		<!-- Font Awesome Icons -->
-		<link rel="stylesheet" href="assets/plugin/fontawesome-free/css/all.min.css" />
-		<!-- IonIcons -->
-		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-		<!-- Theme style -->
-		<link rel="stylesheet" href="assets/dist/css/adminlte.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-		<style>
-			#tab-kelolaSeminar-html{
-			    color: white   ;
-			}*{
-                font-family: poppins;
-            }.login-logo{
-				margin-top: 20rem;
-			}
-			@media(max-width:426px){
-				.login-logo >a{
-					font-size: 1.8rem;
-				}
-				.login-logo{
-					margin-top: 25rem;
-				}
-			}
-		</style>
+		<title>Bootstrap demo</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-		<link rel="stylesheet" href="style_home.css" />
-	</head>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style_home.css">
+		<style>	
+            .col{
+                text-align: start;
+                padding: 0.8rem;
+            }
+            @media(max-width:992px){
+                .col{
+                    font-size: 0.8rem;
+                }
+            }
+            @media(max-width:768px){
+            .col{
+                font-size: 0.6rem;
+                padding: 0.5rem;
+            }
+            }
+            .btn{
+                font-size: 0.7rem;
+            }
+            @media(max-width:576px){
+                h2{
+                    font-size: 1.3rem;
+                }
+                .col{
+                    font-size: 0.5rem;
+                    padding: 0.3rem;
+                }
+                .btn{
+                    font-size: 0.4rem;
+                }
+            }
+            @media(max-width:425px){
 
-	<body class="hold-transition login-page" style="background-color: #468088; font-family: 'Poppins', sans-serif;">
+				.main-c{
+					margin-top: -2rem;
+				}	
+                .col{
+                    font-size: 0.4rem;
+                    padding: 0.3rem;
+                }
+                .btn{
+                    padding: 0.3rem;
+                    font-size: 0.5rem;
+                }
+            }
+            
+		</style>
+	</head>
+	<body style="background-color: #468088;">
 		<!-- nav -->
-		<nav class="navbar mb-5 navbar-expand-lg fixed-top" id="home">
+		<nav class="navbar mb-5 navbar-expand-lg fixed-top bg-light">
 			<div class="container-fluid">
-				<a class="navbar-brand ps-5" href="home.html">
+				<a class="navbar-brand ps-5" href="home_login.html">
 					SISTA
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -66,79 +87,101 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="home.html">Home</a>
+							<a class="nav-link" aria-current="page" href="home_login.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="jadwal.html">Jadwal</a>
+							<a class="nav-link" href="jadwal_login.html">Jadwal</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="d.seminar.html">Daftar Seminar</a>
+							<a class="nav-link" href="d_seminar_login.html">Daftar Seminar</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<!--nav  -->
-
-
-		<div class="login-box">
-			<div class="login-logo">
-				<a style="text-decoration: none;color: white;" href="#"><b>Login</b></a>
-			</div>
-			<!-- /.login-logo -->
-			<div class="card">
-				<div class="card-body login-card-body">
-					<p class="login-box-msg">Login to start your session</p>
-                    <form>
-					<div class="input-group mb-3">
-						<input type="email" class="form-control" placeholder="Username" id="email" required />
-						<div class="input-group-append">
-							<div class="input-group-text">
-								<span class="fas fa-user"></span>
-							</div>
-						</div>
-					</div>
-					<div class="input-group mb-3">
-						<input type="password" id="password" class="form-control" placeholder="Password" required />
-						<div class="input-group-append">
-							<div class="input-group-text">
-								<span class="fas fa-lock"></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-8">
-							<div class="icheck-primary">
-								<input type="checkbox" id="remember" />
-								<label for="remember" style="font-weight: 300;">
-									Remember Me
-								</label>
-							</div>
-						</div>
-						<!-- /.col -->
-						<div class="col-4">
-							<button type="button" class="btn btn-primary btn-block" style="background-color: #468088;" onclick="autentikasi()">Login</button>							
-						</div>
-						<!-- /.col -->
-					</div>
-					<div class="social-auth-links text-center mb-3"></div>
-					<!-- /.social-auth-links -->
-					<p class="mb-1">
-						<a style="font-size: 0.7rem;" href="#">I forgot my password</a>
-					</p>
-					<p class="mb-0">
-						<a style="font-size: 0.7rem;" href="login_admin_.html" class="text-center">Login As Admin</a>
-					</p>
-					<p class="mb-1">
-						<a style="font-size: 0.7rem;" href="Register.html">Sign Up</a>
-					</p>
-                </form>
+		<!-- akhir nav -->
+		<!-- breadcrumb -->
+		<div class="container d-flex justify-content-end breadcrumb1" >
+			<span class="text-light"><a class="link-light" href="home_login.html">Home</a> > <a class="link-light" href="Jadwal_login.html">Jadwal</a> > <a class="link-light" href="/detail_jadwal1.html">Detail Jadwal</a> > Daftar peserta</span>
+		</div>
+		<!-- breadcrumb -->
+		<!-- main content -->
+		<div class="container mb-5">
+			<h2 class="text-light text-center" style="margin-top: 3rem;">Seminar Proposal</h2>
+			<div class="container text-center text-dark mt-5 p-4 border border-white bg-white main_content" >
+				<div class="row">
+					<div class="col">NIM : 011022303</div>
+					<div class="col">Pembimbing : Sirojul Munir S.SI, M.KOM</div>
 				</div>
-				<!-- /.login-card-body -->
+				<div class="row">
+					<div class="col">Nama : Ryandra Athaya Saleh</div>
+					<div class="col">Penguji : Ahmad Rio</div>
+				</div>
+				<div class="row">
+					<div class="col">Prodi : Teknik Informatika</div>
+					<div class="col">Waktu : Senin, 4 Januari 2023, 10:00</div>
+				</div>
+				<div class="row">
+					<div class="col">Judul : Rancang Bangun Aplikasi Seminar Tugas Akhir Berbasis Web Menggunakan MVC Framework</div>
+					<div class="col">Ruang : Zoom Online</div>
+				</div>
+				<div class="row mt-5">
+					<h3>Form Penonton Seminar Proposal</h3>
+				</div>
+				<form class="container needs-validation" novalidate>
+					<div class="mb-3 text-start">
+						<label for="exampleInputEmail1" class="form-label">NIM :</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" required aria-describedby="emailHelp" />
+					</div>
+					<div class="mb-3 text-start">
+						<label for="exampleInputEmail1" class="form-label">Nama :</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" required aria-describedby="emailHelp" />
+					</div>
+					<div class="mb-3 text-start">
+						<label for="exampleInputEmail1" class="form-label">Prodi :</label>
+						<select class="form-select" required aria-label="Default select example">
+							<option selected disabled value="">Choose...</option>
+							<option value="1">Sistem Informasi</option>
+							<option value="2">Teknik Informatika</option>
+							<option value="3">Bisnis Digital</option>
+						</select>
+					</div>
+					<div class="mb-3 text-start">
+						<label for="exampleInputEmail1" class="form-label">Program :</label>
+					</div>
+					<div class="mb-3 text-start">
+						<div class="form-check needs-validation">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+							<label class="form-check-label" for="flexRadioDefault1">
+								D3
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+							<label class="form-check-label"  for="flexRadioDefault2">
+								S1 Reguler
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+							<label class="form-check-label" for="flexRadioDefault2">
+								S1 Fast Track
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+							<label class="form-check-label" for="flexRadioDefault2">
+								S2
+							</label>
+						</div>
+					</div>
+					<div class="d-grid gap-2">
+						<button class="btn text-light" type="submit" style="background-color: #468088;">Daftar</button>
+					</div>
+				</form>
 			</div>
 		</div>
-		<!-- /.login-box -->
-		    <!-- footer -->
+		<!-- footer -->
 		<footer class="container-fluid" >
 			<div class="container">
 				<div class="row">
@@ -203,21 +246,27 @@
 			</div>
 		</footer> 
 		<!-- footer -->
-		<script>
-			function autentikasi(){
-				const user = 'admin'
-				const password = '123'
-		
-				let input_user = document.getElementById('email').value
-				let input_password = document.getElementById('password').value
-				if(input_user==user && input_password ==password){
-					window.location.href = 'base_login.html'
-				}else{
-					alert('Username dan Password salah')
-				}
-			}
 
-	
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(() => {
+				'use strict'
+			
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				const forms = document.querySelectorAll('.needs-validation')
+			
+				// Loop over them and prevent submission
+				Array.from(forms).forEach(form => {
+				form.addEventListener('submit', event => {
+					if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+					}
+			
+					form.classList.add('was-validated')
+				}, false)
+				})
+			})()
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>

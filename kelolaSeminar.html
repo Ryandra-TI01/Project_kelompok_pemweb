@@ -1,445 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>kelola Seminar | Sistem Manajemen Tugas Akhir</title>
-  <style>
-    /* Sembunyikan form secara awal */
-    #myForm {
-        display: none;
-    }
-</style>  
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>kelola Seminar | Sistem Manajemen Tugas Akhir</title>
+		<style>
+			/* Sembunyikan form secara awal */
+			#myForm {
+			    display: none;
+			}
+		</style>
+		<!-- Google Font: Source Sans Pro -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="assets/plugin/fontawesome-free/css/all.min.css" />
+		<!-- IonIcons -->
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+		<!-- Theme style -->
+		<link rel="stylesheet" href="assets/dist/css/adminlte.min.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	</head>
+	<body class="hold-transition sidebar-mini">
+		<!-- Site wrapper -->
+		<div class="wrapper">
+			<!-- Navbar -->
+			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+				<!-- Left navbar links -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+					</li>
+				</ul>
 
-	<!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="assets/plugin/fontawesome-free/css/all.min.css">
-  <!-- IonIcons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-  <!-- Theme style -->
-  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      
-    </ul>
+				<!-- Right navbar links -->
+				<ul class="navbar-nav ml-auto">
+					<!-- Navbar Search -->
+					<li class="nav-item">
+						<a class="nav-link" data-widget="navbar-search" href="#" role="button">
+							<i class="fas fa-search"></i>
+						</a>
+						<div class="navbar-search-block">
+							<form class="form-inline">
+								<div class="input-group input-group-sm">
+									<input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
+									<div class="input-group-append">
+										<button class="btn btn-navbar" type="submit">
+											<i class="fas fa-search"></i>
+										</button>
+										<button class="btn btn-navbar" type="button" data-widget="navbar-search">
+											<i class="fas fa-times"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
+					<!-- Messages Dropdown Menu -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#">
+							<i class="far fa-comments"></i>
+							<span class="badge badge-danger navbar-badge">3</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+							<a href="#" class="dropdown-item">
+								<!-- Message Start -->
+								<div class="media">
+									<img src="assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+									<div class="media-body">
+										<h3 class="dropdown-item-title">
+											Brad Diesel
+											<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+										</h3>
+										<p class="text-sm">Call me whenever you can...</p>
+										<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+									</div>
+								</div>
+								<!-- Message End -->
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">
+								<!-- Message Start -->
+								<div class="media">
+									<img src="assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+									<div class="media-body">
+										<h3 class="dropdown-item-title">
+											John Pierce
+											<span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+										</h3>
+										<p class="text-sm">I got your message bro</p>
+										<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+									</div>
+								</div>
+								<!-- Message End -->
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">
+								<!-- Message Start -->
+								<div class="media">
+									<img src="assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+									<div class="media-body">
+										<h3 class="dropdown-item-title">
+											Nora Silvester
+											<span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+										</h3>
+										<p class="text-sm">The subject goes here</p>
+										<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+									</div>
+								</div>
+								<!-- Message End -->
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+						</div>
+					</li>
+					<!-- Notifications Dropdown Menu -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#">
+							<i class="far fa-bell"></i>
+							<span class="badge badge-warning navbar-badge">15</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+							<span class="dropdown-item dropdown-header">15 Notifications</span>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-envelope mr-2"></i> 4 new messages
+								<span class="float-right text-muted text-sm">3 mins</span>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-users mr-2"></i> 8 friend requests
+								<span class="float-right text-muted text-sm">12 hours</span>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-file mr-2"></i> 3 new reports
+								<span class="float-right text-muted text-sm">2 days</span>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-widget="fullscreen" href="#" role="button">
+							<i class="fas fa-expand-arrows-alt"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+							<i class="fas fa-th-large"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- /.navbar -->
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+			<!-- Main Sidebar Container -->
+			<aside class="main-sidebar sidebar-dark-primary elevation-4">
+				<!-- Brand Logo -->
+				<a href="kelolaSeminar.html" class="brand-link">
+					<img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
+					<span class="brand-text font-weight-light">SISTA</span>
+				</a>
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="kelolaSeminar.html" class="brand-link">
-      <img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SISTA</span>
-    </a>
+				<!-- Sidebar -->
+				<div class="sidebar">
+					<!-- Sidebar user (optional) -->
+					<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+						<div class="info">
+							<a href="#" class="d-block">ANONYMOUS</a>
+						</div>
+					</div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
-          <a href="#" class="d-block">ANONYMOUS</a>
-        </div>
-      </div>
-
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
+					<!-- Sidebar Menu -->
+					<nav class="mt-2">
+						<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+							<!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="kelolaSeminar.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Kelola Seminar
-              </p>
-            </a>     
-          </li>     
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+							<li class="nav-item">
+								<a href="kelolaSeminar.html" class="nav-link">
+									<i class="nav-icon fas fa-tachometer-alt"></i>
+									<p>
+										Kelola Seminar
+									</p>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- /.sidebar-menu -->
+				</div>
+				<!-- /.sidebar -->
+			</aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Daftar Peserta Seminar</h1>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-    
-    <!-- Form yang semula disembunyikan -->
-    <div class="card p-3 mx-2" id="myForm">
-      <div class="row">
-        <div class="col ">
-          <table>
-            <tr>
-              <td class="py-1">
-                <label for="inputNIM">NIM</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="number" id="inputNIM" name="inputNIM">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputNama">Nama</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="text" id="inputNama" name="inputNama">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputProdi">Prodi</label>
-              </td>
-              <td class="py-1 px-4" style="text-align: end;">
-                <select id="inputProdi" name="inputProdi">
-                  <option>Teknik Informatika</option>
-                  <option>Sistem Informasi</option>
-                  <option>Bisnis Digital</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputTanggal">Tanggal Seminar</label>
-              </td>
-              <td class="py-1 px-4" style="text-align: end;">
-                <input type="date" id="inputTanggal" name="inputTanggal">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputJamSeminar">Jam Seminar</label>
-              </td>
-              <td class="py-1 px-4" style="text-align: end;" >
-                <input type="time"  id="inputJamSeminar" name="inputJamSeminar">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputRuangan">Ruangan</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="text" id="inputRuangan" name="inputRuangan">
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="col">
-          <table >
-            <tr>
-              <td class="py-1" style="vertical-align: top;">
-                <label for="inputJudulTA">Judul TA</label>
-              </td>
-              <td class="py-1 px-4">
-                <textarea id="inputJudulTA" name="inputJudulTA" cols="25" rows="2"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputSeminar">Seminar</label>
-              </td>
-              <td class="py-1 px-4">
-                <select type="text" id="inputSeminar" name="inputSeminar">
-                  <option>Proposal</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputPembimbing">Pembimbing</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="text" id="inputPembimbing" name="inputPembimbing">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputPenguji1">Penguji 1</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="text" id="inputPenguji1" name="inputPenguji1">
-              </td>
-            </tr>
-            <tr>
-              <td class="py-1">
-                <label for="inputPenguji2">Penguji 2</label>
-              </td>
-              <td class="py-1 px-4">
-                <input type="text" id="inputPenguji2" name="inputPenguji2">
-              </td>
-            </tr>
-            
-          </table>
-        </div>
-      </div>
-      <div class="btns p-3"></div>
-      <button class="btn" type="button" onclick="ubahKeTeks()">Edit</button>
-    </div>
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<section class="content-header">
+					<div class="container-fluid">
+						<div class="row mb-2">
+							<div class="col-sm-6">
+								<h1>Daftar Peserta Seminar</h1>
+							</div>
+						</div>
+					</div>
+					<!-- /.container-fluid -->
+				</section>
 
-    <div class="card p-2 mx-2" id="hasilTeks" style="display: none; padding: 1rem;"></div>
-    <!-- end-form -->
-    <!-- Main content -->
-    <section class="content">
-      
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">DAFTAR PESERTA SEMINAR</h3>  
-            </div>
-            <!-- Tombol untuk menampilkan form -->
-            <div>
-          <button onclick="tampilkanForm()" class="my-4 btn ms-3" style="background-color:#468088;color:white;">Tambah Peserta Seminar</button>
-          </div>
-            <!-- /.card-header -->
-            <div class="card-body table-responsive p-0">
-              <table class="table table-hover text-nowrap">
-                <thead>
-                  <tr>
-                    <th>NO</th>
-                    <th>NIM</th>
-                    <th>Mahasiswa/i</th>
-                    <th>Prodi</th>
-                    <th>Waktu</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>0110223020</td>
-                    <td>Muhammad Aris Naufal</td>
-                    <td>Teknik Informatika</td>
-                    <td>S1</td>
-                    <td>Diterima</td>
-                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>0110223010</td>
-                    <td>Roby Mulia</td>
-                    <td>Teknik Informatika</td>
-                    <td>S1</td>
-                    <td>Diterima</td>
-                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>0110223020</td>
-                    <td>Muhammad Aris Naufal</td>
-                    <td>Teknik Informatika</td>
-                    <td>S1</td>
-                    <td>Diterima</td>
-                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>0110223020</td>
-                    <td>Muhammad Aris Naufal</td>
-                    <td>Teknik Informatika</td>
-                    <td>S1</td>
-                    <td>Diterima</td>
-                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-            </div>
-            
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-      </div>
-      
-      
-      
-      
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+				<!-- Form yang semula disembunyikan -->
+				<div class="card p-3 mx-2" id="myForm">
+					<div class="row">
+						<div class="col">
+							<table>
+								<tr>
+									<td class="py-1">
+										<label for="inputNIM">NIM</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="number" id="inputNIM" name="inputNIM" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputNama">Nama</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="text" id="inputNama" name="inputNama" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputProdi">Prodi</label>
+									</td>
+									<td class="py-1 px-4" style="text-align: end;">
+										<select id="inputProdi" name="inputProdi">
+											<option>Teknik Informatika</option>
+											<option>Sistem Informasi</option>
+											<option>Bisnis Digital</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputTanggal">Tanggal Seminar</label>
+									</td>
+									<td class="py-1 px-4" style="text-align: end;">
+										<input type="date" id="inputTanggal" name="inputTanggal" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputJamSeminar">Jam Seminar</label>
+									</td>
+									<td class="py-1 px-4" style="text-align: end;">
+										<input type="time" id="inputJamSeminar" name="inputJamSeminar" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputRuangan">Ruangan</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="text" id="inputRuangan" name="inputRuangan" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col">
+							<table>
+								<tr>
+									<td class="py-1" style="vertical-align: top;">
+										<label for="inputJudulTA">Judul TA</label>
+									</td>
+									<td class="py-1 px-4">
+										<textarea id="inputJudulTA" name="inputJudulTA" cols="25" rows="2"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputSeminar">Seminar</label>
+									</td>
+									<td class="py-1 px-4">
+										<select type="text" id="inputSeminar" name="inputSeminar">
+											<option>Proposal</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputPembimbing">Pembimbing</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="text" id="inputPembimbing" name="inputPembimbing" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputPenguji1">Penguji 1</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="text" id="inputPenguji1" name="inputPenguji1" />
+									</td>
+								</tr>
+								<tr>
+									<td class="py-1">
+										<label for="inputPenguji2">Penguji 2</label>
+									</td>
+									<td class="py-1 px-4">
+										<input type="text" id="inputPenguji2" name="inputPenguji2" />
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="btns p-3"></div>
+					<button class="btn" type="button" onclick="ubahKeTeks()">Edit</button>
+				</div>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+				<div class="card p-2 mx-2" id="hasilTeks" style="display: none; padding: 1rem;"></div>
+				<!-- end-form -->
+				<!-- Main content -->
+				<section class="content">
+					<div class="row">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title">DAFTAR PESERTA SEMINAR</h3>
+								</div>
+								<!-- Tombol untuk menampilkan form -->
+								<div>
+									<button onclick="tampilkanForm()" class="my-4 btn ms-3" style="background-color:#468088;color:white;">Tambah Peserta Seminar</button>
+								</div>
+								<!-- /.card-header -->
+								<div class="card-body table-responsive p-0">
+									<table class="table table-hover text-nowrap">
+										<thead>
+											<tr>
+												<th>NO</th>
+												<th>NIM</th>
+												<th>Mahasiswa/i</th>
+												<th>Prodi</th>
+												<th>Waktu</th>
+												<th>Status</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>0110223020</td>
+												<td>Muhammad Aris Naufal</td>
+												<td>Teknik Informatika</td>
+												<td>S1</td>
+												<td>Diterima</td>
+												<td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>0110223010</td>
+												<td>Roby Mulia</td>
+												<td>Teknik Informatika</td>
+												<td>S1</td>
+												<td>Diterima</td>
+												<td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>0110223020</td>
+												<td>Muhammad Aris Naufal</td>
+												<td>Teknik Informatika</td>
+												<td>S1</td>
+												<td>Diterima</td>
+												<td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>0110223020</td>
+												<td>Muhammad Aris Naufal</td>
+												<td>Teknik Informatika</td>
+												<td>S1</td>
+												<td>Diterima</td>
+												<td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 
-<script>
-  function tampilkanForm() {
-    // Menampilkan form setelah tombol ditekan
-    document.getElementById("myForm").style.display = "block";
-  }
+								<!-- /.card-body -->
+							</div>
+							<!-- /.card -->
+						</div>
+					</div>
+				</section>
+				<!-- /.content -->
+			</div>
+			<!-- /.content-wrapper -->
 
-  function ubahKeTeks() {
-    // Mendapatkan nilai input dari formulir
-    var inputNIM = document.getElementById("inputNIM").value;
-    var inputNama = document.getElementById("inputNama").value;
-    var inputProdi = document.getElementById("inputProdi").value;
-    var inputTanggal = document.getElementById("inputTanggal").value;
-    var inputJamSeminar = document.getElementById("inputJamSeminar").value;
-    var inputRuangan = document.getElementById("inputRuangan").value;
-    var inputJudulTA = document.getElementById("inputJudulTA").value;
-    var inputSeminar = document.getElementById("inputSeminar").value;
-    var inputPembimbing = document.getElementById("inputPembimbing").value;
-    var inputPenguji1 = document.getElementById("inputPenguji1").value;
-    var inputPenguji2 = document.getElementById("inputPenguji2").value;
+			<!-- Control Sidebar -->
+			<aside class="control-sidebar control-sidebar-dark">
+				<!-- Control sidebar content goes here -->
+			</aside>
+			<!-- /.control-sidebar -->
+		</div>
+		<!-- ./wrapper -->
 
-    document.getElementById("hasilTeks").style.display = "block";
-      // Menetapkan nilai input ke elemen div
-    document.getElementById("hasilTeks").innerText ="NIM: " + inputNIM + "\nNama Mahasiswa: " + inputNama + "\nProdi: " + inputProdi + "\nTanggal: " + inputTanggal + "\nJam: " + inputJamSeminar + "\nRuangan: " + inputRuangan + "\nJudul Tugas Akhir: " +inputJudulTA + "\nSeminar: " + inputSeminar + "\nDosen Pembimbing: " +inputPembimbing + "\nDosen Penguji 1: " + inputPenguji1 + "\nDosen Penguji 2: " + inputPenguji2;
+		<script>
+			function tampilkanForm() {
+			  // Menampilkan form setelah tombol ditekan
+			  document.getElementById("myForm").style.display = "block";
+			}
 
-    document.getElementById("myForm").style.display = "none";
-  }
+			function ubahKeTeks() {
+			  // Mendapatkan nilai input dari formulir
+			  var inputNIM = document.getElementById("inputNIM").value;
+			  var inputNama = document.getElementById("inputNama").value;
+			  var inputProdi = document.getElementById("inputProdi").value;
+			  var inputTanggal = document.getElementById("inputTanggal").value;
+			  var inputJamSeminar = document.getElementById("inputJamSeminar").value;
+			  var inputRuangan = document.getElementById("inputRuangan").value;
+			  var inputJudulTA = document.getElementById("inputJudulTA").value;
+			  var inputSeminar = document.getElementById("inputSeminar").value;
+			  var inputPembimbing = document.getElementById("inputPembimbing").value;
+			  var inputPenguji1 = document.getElementById("inputPenguji1").value;
+			  var inputPenguji2 = document.getElementById("inputPenguji2").value;
 
-</script>
+			  document.getElementById("hasilTeks").style.display = "block";
+			    // Menetapkan nilai input ke elemen div
+			  document.getElementById("hasilTeks").innerText ="NIM: " + inputNIM + "\nNama Mahasiswa: " + inputNama + "\nProdi: " + inputProdi + "\nTanggal: " + inputTanggal + "\nJam: " + inputJamSeminar + "\nRuangan: " + inputRuangan + "\nJudul Tugas Akhir: " +inputJudulTA + "\nSeminar: " + inputSeminar + "\nDosen Pembimbing: " +inputPembimbing + "\nDosen Penguji 1: " + inputPenguji1 + "\nDosen Penguji 2: " + inputPenguji2;
+
+			  document.getElementById("myForm").style.display = "none";
+			}
+		</script>
 
 		<!-- jQuery -->
 		<script src="assets/plugin/jquery/jquery.min.js"></script>
@@ -450,5 +440,5 @@
 
 		<!-- OPTIONAL SCRIPTS -->
 		<script src="assets/plugin/chart.js/Chart.min.css"></script>
-</body>
+	</body>
 </html>

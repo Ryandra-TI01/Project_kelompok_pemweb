@@ -41,6 +41,7 @@ footer{
     border-top: 1px solid rgb(167, 167, 167);
     margin-top: 3rem;
     padding: 1.5rem;
+    width: 100vw;
 }
 .font-p{
     font-size: 0.8rem;
@@ -162,7 +163,8 @@ footer{
     }
     h2{
         margin-top: 1rem;
-    }    nav>p>a{
+    }
+    nav>p>a{
         font-size: 0.8rem;
     }
     nav>p{
@@ -196,7 +198,7 @@ footer{
     }
     .alur-circle>p{
         font-size: 0.7rem;
-    }  
+    }footer{width: 100vw;}  
 }
 @media(max-width:470px){
     header{
