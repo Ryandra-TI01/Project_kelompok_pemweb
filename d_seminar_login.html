@@ -63,10 +63,11 @@
 			    }
 			}
 		</style>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body style="background-color: #468088;">
 		<!-- nav -->
-		<nav class="navbar mb-5 navbar-expand-lg fixed-top bg-light">
+		<nav class="navbar mb-5 navbar-expand-lg fixed-top bg-light" data-aos="fade-down">
 			<div class="container-fluid">
 				<a class="navbar-brand ps-5" href="home_login.html">
 					SISTA
@@ -104,6 +105,9 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">Daftar Seminar</a>
 						</li>
+						<li class="nav-item">
+                            <a class="nav-link" href="Login.html">Logout</a>
+                        </li>   
 					</ul>
 				</div>
 			</div>
@@ -111,30 +115,30 @@
 		<!-- akhir nav -->
 
 		<!-- breadcrumb -->
-		<div class="container d-flex justify-content-end breadcrumb1" >
+		<div class="container d-flex justify-content-end breadcrumb1" data-aos="fade-down">
 			<span class="text-light"><a class="link-light" href="home_login.html">Home</a> > Daftar Seminar</span>
 		</div>
 		<!-- breadcrumb -->
 
 		<!-- main content -->
-		<div class="container mb-5 main-c">
-			<h2 class="text-light text-center" style="margin-top:3rem">Form Daftar Seminar TA</h2>
-            <p class="text-center mt-3 text-light">Pendaftaran seminar berlaku untuk mahasiswa yang telah mendapat persetujuan dan pembimbing TA</p>
+		<div class="container mb-5 main-c"data-aos="fade-up"data-aos-delay="300">
+			<h2 class="text-light text-center" style="margin-top:3rem" data-aos="fade-down"data-aos-delay="500">Form Daftar Seminar TA</h2>
+            <p class="text-center mt-3 text-light" data-aos="fade-down"data-aos-delay="600">Pendaftaran seminar berlaku untuk mahasiswa yang telah mendapat persetujuan dan pembimbing TA</p>
 			
-			<form class="row g-3 needs-validation p-3 mt-3" novalidate>
-				<div class="col-12 col-md-6">
-					<label for="validationCustom01" class="form-label">NIM</label>
+			<form class="row g-3 needs-validation p-3 mt-3" novalidate  data-aos="zoom-in-up" data-aos-delay="200">
+				<div class="col-12 col-md-6"data-aos="fade-up" data-aos-delay="500">
+					<label for="validationCustom01" class="form-label" >NIM</label>
 					<input type="text" class="form-control" id="validationCustom01" required />
 				</div>
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6"data-aos="fade-up" data-aos-delay="600">
 					<label for="validationCustom01" class="form-label">Nama</label>
 					<input type="text" class="form-control" id="validationCustom01"  required />
 				</div>
-				<div class="col-12">
+				<div class="col-12"data-aos="fade-up" data-aos-delay="700">
 					<label for="exampleFormControlTextarea1" class="form-label">Judul TA</label>
   					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
 				</div>
-				<div class="col-6">
+				<div class="col-6"data-aos="fade-up" data-aos-delay="800">
 					<label for="validationCustom04" class="form-label">Prodi</label>
 					<select class="form-select" id="validationCustom04" required>
 					  <option selected disabled value="">Choose...</option>
@@ -143,19 +147,19 @@
                         <option>Bisnis Digital</option>
 					</select>
 				</div>
-				<div class="col-6">
+				<div class="col-6"data-aos="fade-up" data-aos-delay="900">
 					<label for="validationCustom01" class="form-label">Tanggal Seminar</label>
 					<input type="date" class="form-control" id="validationCustom01"  required />
 				</div>
-				<div class="col-6">
+				<div class="col-6"data-aos="fade-up" data-aos-delay="1000">
 					<label for="validationCustom01" class="form-label">Tanggal Seminar</label>
 					<input type="time" class="form-control" id="validationCustom01"  required />
 				</div>
-				<div class="col-6">
+				<div class="col-6"data-aos="fade-up" data-aos-delay="1100">
 					<label for="validationCustom01" class="form-label">Ruangan</label>
 					<input type="text" class="form-control" id="validationCustom01"  required />
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-3"data-aos="fade-up" data-aos-delay="1200">
 					<label for="validationCustom04" class="form-label">Seminar</label>
 					<select class="form-select" id="validationCustom04" required>
 					  <option selected disabled value="">Choose...</option>
@@ -164,7 +168,7 @@
                       <option>Seminar Hasil</option>
 					</select>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-3"data-aos="fade-up" data-aos-delay="1300">
 					<label for="validationCustom04" class="form-label">Pembimbing</label>
 					<select class="form-select" id="validationCustom04" required>
 					  <option selected disabled value="">Choose...</option>
@@ -172,48 +176,48 @@
                       <option>Krisna Panji, S.Kom., M.M</option>
 					</select>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-3"data-aos="fade-up" data-aos-delay="1400">
 					<label for="validationCustom04" class="form-label">Penguji 1</label>
 					<select class="form-select" id="validationCustom04" required>
 					  <option selected disabled value="">Choose...</option>
 					  <option>Ahmad Rio M.Si</option>
 					</select>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6 col-md-3"data-aos="fade-up" data-aos-delay="1500">
 					<label for="validationCustom04" class="form-label">Penguji 2</label>
 					<select class="form-select" id="validationCustom04" required>
 					  <option selected disabled value="">Choose...</option>
 					  <option>Amalia Rahmah M.T</option>
 					</select>
 				</div>
-				<div class="d-grid gap-2">
+				<div class="d-grid gap-2"data-aos="fade-up" data-aos-delay="1600">
 					<button class="btn text-light" type="submit" style="background-color: #468088;">Daftar</button>
 				</div>
 			</form>
 		</div>
 
 		<!-- footer -->
-		<footer class="container-fluid" >
+		<footer class="container-fluid" data-aos="fade-up" data-aos-delay="300">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4"data-aos="fade-up" data-aos-delay="400">
 						<h5>Hubungi Kami</h5>
 						<p class="font-p">Email: info@sista.com</p>
 						<p class="font-p">Telepon: +62 123 456 789</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4"data-aos="fade-up" data-aos-delay="500">
 						<h5>STT Terpadu Nurul Fikri</h5>
 						<p class="font-p">Kampus A: Jl. Situ Indah no.116, Cimanggis, Depok
 							<br>Kampus B: Jl. Raya Lenteng Agung No.20, Jagakarsa
 						</p>
 					</div>
-					<div class="col-md-4 ">
+					<div class="col-md-4"data-aos="fade-up" data-aos-delay="500">
 						<p class="font-p">&copy; 2024 SISTA <br> Seminar Tugas Akhir. Hak Cipta Dilindungi.</p>
 					</div>
 				</div>      
 				<!-- <div style="background-color: #468088; width:80vw;height:2px;"></div>           -->
 				<hr>
-				<div class="row">
+				<div class="row"data-aos="fade-up" data-aos-delay="600">
 					<div class="col">
 						<div class="parent">
 							<div class="child child-1">
@@ -256,9 +260,16 @@
 				</div>
 			</div>
 		</footer> 
-		<!-- footer -->
+	<!-- footer -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-						// Example starter JavaScript for disabling form submissions if there are invalid fields
+		  AOS.init({
+			once: true,
+			duration:500
+		  });
+		</script>
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
 			(() => {
 				'use strict'
 			
